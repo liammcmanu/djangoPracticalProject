@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+	{% load static %}
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	</head>
+
+	<html>
+		<body>
+			<img class="image" src="{% static "images/cats_with_fire.jpg" %}"
+			alt="Picture of Cat">
+			<div class="mainText">
+				<h2 class="heading">
+					All the cats are:
+				</h2>
+				{% if cats %}
+					<ul class="listText">
+						{% for cat in cats %}
+							<li>{{ cat }}</li>
+						{% endfor %}
+					</ul>
+				{% else %}
+				<h2 class="heading">There are no Cats 😢.</h2>
+				{% endif %}
+			</div>
+			<p class="footerText subText">Click to go back to 
+				<a class="linkText" href="/practicalApp/">Home</a>
+			</p>
+		</body>
+	</html>

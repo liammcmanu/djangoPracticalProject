@@ -1,3 +1,5 @@
 from django.contrib import admin
+from practicalApp.models import Cat, Student
 
-# Register your models here.
+admin.site.register(Cat)
+admin.site.register(Student)
